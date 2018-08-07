@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd27da2b-405c-41c1-9394-c8ac0630ed50" name="Default Changelist" comment="" />
+    <list default="true" id="bd27da2b-405c-41c1-9394-c8ac0630ed50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/components/Game/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/components/Game/Game.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -29,7 +33,7 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
           <entry key="js" value="15" />
-          <entry key="json" value="16" />
+          <entry key="json" value="19" />
           <entry key="md" value="3" />
           <entry key="sass" value="13" />
           <entry key="snap" value="2" />
@@ -39,7 +43,7 @@
         <counts>
           <entry key="CSS" value="14" />
           <entry key="HTML" value="1" />
-          <entry key="JSON" value="16" />
+          <entry key="JSON" value="19" />
           <entry key="JavaScript" value="15" />
           <entry key="Jest Snapshot" value="2" />
           <entry key="Markdown" value="3" />
@@ -51,8 +55,8 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="html" value="7" />
-          <entry key="js" value="2514" />
-          <entry key="json" value="64" />
+          <entry key="js" value="2607" />
+          <entry key="json" value="65" />
           <entry key="sass" value="333" />
         </counts>
       </usages-collector>
@@ -60,8 +64,8 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="HTML" value="7" />
-          <entry key="JSON" value="64" />
-          <entry key="JavaScript" value="2514" />
+          <entry key="JSON" value="65" />
+          <entry key="JavaScript" value="2607" />
           <entry key="Sass" value="333" />
         </counts>
       </usages-collector>
@@ -70,14 +74,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/js/components/Game/Game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+            <state relative-caret-position="1320">
+              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/.eslintrc.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -96,13 +109,15 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/frontend/src/js/components/App.js" />
         <option value="$PROJECT_DIR$/frontend/src/js/__tests__/App.js" />
         <option value="$PROJECT_DIR$/frontend/src/setupTests.js" />
-        <option value="$PROJECT_DIR$/frontend/.eslintrc.json" />
         <option value="$PROJECT_DIR$/frontend/src/js/components/Game.test.js" />
         <option value="$PROJECT_DIR$/frontend/src/js/components/Game.js" />
         <option value="$PROJECT_DIR$/frontend/src/styles/css/main.css" />
@@ -116,6 +131,7 @@
         <option value="$PROJECT_DIR$/frontend/src/index.js" />
         <option value="$PROJECT_DIR$/frontend/src/js/components/Game/Square.js" />
         <option value="$PROJECT_DIR$/frontend/src/js/components/Game/Game.js" />
+        <option value="$PROJECT_DIR$/frontend/.eslintrc.json" />
       </list>
     </option>
   </component>
@@ -159,6 +175,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -176,74 +193,6 @@
               <item name="teamstats" type="b2602c69:ProjectViewProjectNode" />
               <item name="teamstats" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teamstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teamstats" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teamstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teamstats" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teamstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teamstats" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teamstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teamstats" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teamstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teamstats" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teamstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teamstats" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teamstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teamstats" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teamstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teamstats" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teamstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teamstats" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -342,7 +291,7 @@
       <workItem from="1533629986235" duration="419000" />
       <workItem from="1533630440306" duration="40000" />
       <workItem from="1533630517834" duration="161000" />
-      <workItem from="1533630765266" duration="16055000" />
+      <workItem from="1533630765266" duration="17351000" />
     </task>
     <servers />
   </component>
@@ -367,7 +316,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16675000" />
+    <option name="totallyTimeSpent" value="17971000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -393,7 +342,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32876712" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -421,13 +370,6 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/.eslintrc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -560,11 +502,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/js/components/Game/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+        <state relative-caret-position="1320">
+          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/.eslintrc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="16" />
         </state>
       </provider>
     </entry>

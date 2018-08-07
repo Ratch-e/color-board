@@ -7,7 +7,7 @@ class Game extends Component {
 
 		this.state = {
 			colors: [
-				[],[],[],[],[],[],[],[]
+				[], [], [], [], [], [], [], []
 			],
 		};
 		this.setColors = this.setColors.bind(this);
@@ -48,7 +48,15 @@ class Game extends Component {
 		const row = 8, col = 8;
 		for (let x = 0; x < row; x++) {
 			for (let y = 0; y < col; y++) {
-				squares.push(<Square key={squares.length} color={this.state.colors[x][y]} click={this.squareClick} x={x} y={y}/>);
+				squares.push(
+					<Square
+						key={squares.length}
+						color={this.state.colors[x][y]}
+						click={this.squareClick}
+						x={x}
+						y={y}
+					/>
+				);
 			}
 		}
 		return squares;
@@ -56,7 +64,10 @@ class Game extends Component {
 
 	squareClick(x, y, color) {
 		let newState = {...this.state};
-		newState.colors[0][0] = color;
+		newState.colors[x + 1 <= 7 ? x + 1 : x][y] = color;
+		newState.colors[x - 1 >= 0 ? x - 1 : x][y] = color;
+		newState.colors[x][y + 1 <= 7 ? y + 1 : y] = color;
+		newState.colors[x][y - 1 >= 0 ? y - 1 : y] = color;
 		this.setState({colors: newState.colors});
 		return null;
 	}
