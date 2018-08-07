@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.board {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0 #878d8e;
+  display: grid;
+  grid-template-rows: repeat(8, 40px);
+  grid-template-columns: repeat(8, 40px);
+  grid-gap: 8px; }
+  .board__square {
+    border: 1px solid black;
+    cursor: pointer; }
+    .board__square_color_red {
+      background-color: red; }
+    .board__square_color_green {
+      background-color: green; }
+    .board__square_color_blue {
+      background-color: blue; }
