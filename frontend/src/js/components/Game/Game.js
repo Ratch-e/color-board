@@ -6,7 +6,9 @@ class Game extends Component {
 		super(props);
 
 		this.state = {
-			colors: [[], [], [], [], [], [], [], []],
+			cols: 15,
+			rows: 15,
+			colors: [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []],
 		};
 		this.setColors = this.setColors.bind(this);
 		this.squareClick = this.squareClick.bind(this);
@@ -22,14 +24,13 @@ class Game extends Component {
 	 */
 	setColors() {
 		const COLORS = [
-			'red', 'green', 'blue'
+			'red', 'green', 'blue', 'yellow', 'violet', 'orange', 'lightblue'
 		];
-		const row = 8, col = 8;
 		let newState = {...this.state};
 
-		for (let x = 0; x < row; x++) {
+		for (let x = 0; x < this.state.rows; x++) {
 			newState.colors[x] = [];
-			for (let y = 0; y < col; y++) {
+			for (let y = 0; y < this.state.cols; y++) {
 				newState.colors[x][y] = COLORS[Math.floor(Math.random() * COLORS.length)];
 			}
 		}
@@ -43,9 +44,8 @@ class Game extends Component {
 	 */
 	createBoard() {
 		let squares = [];
-		const row = 8, col = 8;
-		for (let x = 0; x < row; x++) {
-			for (let y = 0; y < col; y++) {
+		for (let x = 0; x < this.state.rows; x++) {
+			for (let y = 0; y < this.state.cols; y++) {
 				squares.push(
 					<Square
 						key={squares.length}
@@ -60,17 +60,23 @@ class Game extends Component {
 		return squares;
 	}
 
+	/**
+	 * Выбор цвета
+	 * @param x
+	 * @param y
+	 * @param color
+	 * @returns {null}
+	 */
 	squareClick(x, y, color) {
-		let areaBoard = [[], [], [], [], [], [], [], []];
-		const prevColor = this.state.colors[7][0];
+		let areaBoard = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
+		const prevColor = this.state.colors[this.state.rows - 1][0];
 
-		this.checkArea(this.state.colors, areaBoard, 7, 0, prevColor);
+		this.checkArea(this.state.colors, areaBoard, this.state.rows - 1, 0, prevColor);
 
 		let newState = {...this.state};
-		const row = 8, col = 8;
-		for (let x = 0; x < row; x++) {
-			for (let y = 0; y < col; y++) {
-				if(areaBoard[x][y] === 1) {
+		for (let x = 0; x < this.state.rows; x++) {
+			for (let y = 0; y < this.state.cols; y++) {
+				if (areaBoard[x][y] === 1) {
 					newState.colors[x][y] = color;
 				}
 			}
@@ -80,7 +86,17 @@ class Game extends Component {
 		return null;
 	}
 
+	/**
+	 * Проверка области для смены цвета
+	 * @param colorsBoard
+	 * @param areaBoard
+	 * @param x
+	 * @param y
+	 * @param color
+	 * @returns {null}
+	 */
 	checkArea(colorsBoard, areaBoard, x, y, color) {
+		console.log(`x: ${x}, y: ${y}`);
 		if (colorsBoard[x][y] === color && areaBoard[x][y] !== 1) {
 			areaBoard[x][y] = 1;
 			if (areaBoard[x - 1]) {

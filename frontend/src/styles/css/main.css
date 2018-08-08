@@ -13,9 +13,9 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 4px 0 #878d8e;
   display: grid;
-  grid-template-rows: repeat(8, 40px);
-  grid-template-columns: repeat(8, 40px);
-  grid-gap: 8px; }
+  grid-template-rows: repeat(15, 35px);
+  grid-template-columns: repeat(15, 35px);
+  grid-gap: 5px; }
   .board__square {
     border: 1px solid black;
     cursor: pointer; }
@@ -25,3 +25,11 @@ body {
       background-color: green; }
     .board__square_color_blue {
       background-color: blue; }
+    .board__square_color_yellow {
+      background-color: yellow; }
+    .board__square_color_violet {
+      background-color: darkviolet; }
+    .board__square_color_orange {
+      background-color: orange; }
+    .board__square_color_lightblue {
+      background-color: lightblue; }
