@@ -6,9 +6,7 @@ class Game extends Component {
 		super(props);
 
 		this.state = {
-			colors: [
-				[], [], [], [], [], [], [], []
-			],
+			colors: [[], [], [], [], [], [], [], []],
 		};
 		this.setColors = this.setColors.bind(this);
 		this.squareClick = this.squareClick.bind(this);
@@ -63,13 +61,43 @@ class Game extends Component {
 	}
 
 	squareClick(x, y, color) {
+		let areaBoard = [[], [], [], [], [], [], [], []];
+		const prevColor = this.state.colors[7][0];
+
+		this.checkArea(this.state.colors, areaBoard, 7, 0, prevColor);
+
 		let newState = {...this.state};
-		newState.colors[x + 1 <= 7 ? x + 1 : x][y] = color;
-		newState.colors[x - 1 >= 0 ? x - 1 : x][y] = color;
-		newState.colors[x][y + 1 <= 7 ? y + 1 : y] = color;
-		newState.colors[x][y - 1 >= 0 ? y - 1 : y] = color;
+		const row = 8, col = 8;
+		for (let x = 0; x < row; x++) {
+			for (let y = 0; y < col; y++) {
+				if(areaBoard[x][y] === 1) {
+					newState.colors[x][y] = color;
+				}
+			}
+		}
 		this.setState({colors: newState.colors});
+
 		return null;
+	}
+
+	checkArea(colorsBoard, areaBoard, x, y, color) {
+		if (colorsBoard[x][y] === color && areaBoard[x][y] !== 1) {
+			areaBoard[x][y] = 1;
+			if (areaBoard[x - 1]) {
+				this.checkArea(this.state.colors, areaBoard, x - 1, y, color);
+			}
+			if (areaBoard[x + 1]) {
+				this.checkArea(this.state.colors, areaBoard, x + 1, y, color);
+			}
+			if (areaBoard[y - 1]) {
+				this.checkArea(this.state.colors, areaBoard, x, y - 1, color);
+			}
+			if (areaBoard[y + 1]) {
+				this.checkArea(this.state.colors, areaBoard, x, y + 1, color);
+			}
+		} else {
+			return null;
+		}
 	}
 
 	render() {
