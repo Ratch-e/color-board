@@ -96,7 +96,6 @@ class Game extends Component {
 	 * @returns {null}
 	 */
 	checkArea(colorsBoard, areaBoard, x, y, color) {
-		console.log(`x: ${x}, y: ${y}`);
 		if (colorsBoard[x][y] === color && areaBoard[x][y] !== 1) {
 			areaBoard[x][y] = 1;
 			if (areaBoard[x - 1]) {
