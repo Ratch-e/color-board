@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd27da2b-405c-41c1-9394-c8ac0630ed50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/js/components/Game/Control.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/styles/sass/common/controls.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/js/components/Game/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/components/Game/Game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/components/Game/Square.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/components/Game/Square.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/sass/common/board.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/sass/common/board.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/sass/main.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -61,7 +54,7 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="html" value="7" />
-          <entry key="js" value="4216" />
+          <entry key="js" value="4271" />
           <entry key="json" value="65" />
           <entry key="sass" value="498" />
         </counts>
@@ -71,7 +64,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="7" />
           <entry key="JSON" value="65" />
-          <entry key="JavaScript" value="4216" />
+          <entry key="JavaScript" value="4271" />
           <entry key="Sass" value="498" />
         </counts>
       </usages-collector>
@@ -80,11 +73,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/js/components/Game/Game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+            <state relative-caret-position="209">
+              <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -92,7 +85,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/js/components/Game/Control.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
@@ -135,8 +128,8 @@
         <option value="$PROJECT_DIR$/frontend/src/styles/sass/common/controls.sass" />
         <option value="$PROJECT_DIR$/frontend/src/styles/sass/common/board.sass" />
         <option value="$PROJECT_DIR$/frontend/src/js/components/Game/Square.js" />
-        <option value="$PROJECT_DIR$/frontend/src/js/components/Game/Game.js" />
         <option value="$PROJECT_DIR$/frontend/src/js/components/Game/Control.js" />
+        <option value="$PROJECT_DIR$/frontend/src/js/components/Game/Game.js" />
       </list>
     </option>
   </component>
@@ -350,7 +343,7 @@
       <workItem from="1533629986235" duration="419000" />
       <workItem from="1533630440306" duration="40000" />
       <workItem from="1533630517834" duration="161000" />
-      <workItem from="1533630765266" duration="27304000" />
+      <workItem from="1533630765266" duration="27567000" />
     </task>
     <servers />
   </component>
@@ -375,7 +368,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27924000" />
+    <option name="totallyTimeSpent" value="28187000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -570,22 +563,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/js/components/Game/Game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/js/components/Game/Control.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/js/components/Game/Game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

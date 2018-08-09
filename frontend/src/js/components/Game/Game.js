@@ -61,6 +61,10 @@ class Game extends Component {
 		return squares;
 	}
 
+	/**
+	 * Создание элементов управления
+	 * @returns {Array}
+	 */
 	createControls() {
 		let controls = [];
 		for (let x = 0; x < this.state.colors.length; x++) {
