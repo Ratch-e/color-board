@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Square from './Square';
+import Control from './Control';
 
 class Game extends Component {
 	constructor(props) {
@@ -8,11 +9,15 @@ class Game extends Component {
 		this.state = {
 			cols: 15,
 			rows: 15,
-			colors: [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []],
+			squares: [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []],
+			colors: [
+				'red', 'green', 'blue', 'yellow', 'violet', 'orange', 'lightblue'
+			]
 		};
 		this.setColors = this.setColors.bind(this);
 		this.squareClick = this.squareClick.bind(this);
 		this.createBoard = this.createBoard.bind(this);
+		this.createControls = this.createControls.bind(this);
 	}
 
 	componentDidMount() {
@@ -23,19 +28,15 @@ class Game extends Component {
 	 * Установка случайных цветов при старте
 	 */
 	setColors() {
-		const COLORS = [
-			'red', 'green', 'blue', 'yellow', 'violet', 'orange', 'lightblue'
-		];
 		let newState = {...this.state};
-
 		for (let x = 0; x < this.state.rows; x++) {
-			newState.colors[x] = [];
+			newState.squares[x] = [];
 			for (let y = 0; y < this.state.cols; y++) {
-				newState.colors[x][y] = COLORS[Math.floor(Math.random() * COLORS.length)];
+				newState.squares[x][y] = this.state.colors[Math.floor(Math.random() * this.state.colors.length)];
 			}
 		}
 
-		this.setState({colors: newState.colors});
+		this.setState({squares: newState.squares});
 	}
 
 	/**
@@ -49,7 +50,7 @@ class Game extends Component {
 				squares.push(
 					<Square
 						key={squares.length}
-						color={this.state.colors[x][y]}
+						color={this.state.squares[x][y]}
 						click={this.squareClick}
 						x={x}
 						y={y}
@@ -60,28 +61,40 @@ class Game extends Component {
 		return squares;
 	}
 
+	createControls() {
+		let controls = [];
+		for (let x = 0; x < this.state.colors.length; x++) {
+			controls.push(
+				<Control
+					color={this.state.colors[x]}
+					click={this.squareClick}
+					key={x}
+				/>
+			);
+		}
+		return controls;
+	}
+
 	/**
 	 * Выбор цвета
-	 * @param x
-	 * @param y
 	 * @param color
 	 * @returns {null}
 	 */
-	squareClick(x, y, color) {
+	squareClick(color) {
 		let areaBoard = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
-		const prevColor = this.state.colors[this.state.rows - 1][0];
+		const prevColor = this.state.squares[this.state.rows - 1][0];
 
-		this.checkArea(this.state.colors, areaBoard, this.state.rows - 1, 0, prevColor);
+		this.checkArea(this.state.squares, areaBoard, this.state.rows - 1, 0, prevColor);
 
 		let newState = {...this.state};
 		for (let x = 0; x < this.state.rows; x++) {
 			for (let y = 0; y < this.state.cols; y++) {
 				if (areaBoard[x][y] === 1) {
-					newState.colors[x][y] = color;
+					newState.squares[x][y] = color;
 				}
 			}
 		}
-		this.setState({colors: newState.colors});
+		this.setState({squares: newState.squares});
 
 		return null;
 	}
@@ -99,16 +112,16 @@ class Game extends Component {
 		if (colorsBoard[x][y] === color && areaBoard[x][y] !== 1) {
 			areaBoard[x][y] = 1;
 			if (areaBoard[x - 1]) {
-				this.checkArea(this.state.colors, areaBoard, x - 1, y, color);
+				this.checkArea(this.state.squares, areaBoard, x - 1, y, color);
 			}
 			if (areaBoard[x + 1]) {
-				this.checkArea(this.state.colors, areaBoard, x + 1, y, color);
+				this.checkArea(this.state.squares, areaBoard, x + 1, y, color);
 			}
 			if (areaBoard[y - 1]) {
-				this.checkArea(this.state.colors, areaBoard, x, y - 1, color);
+				this.checkArea(this.state.squares, areaBoard, x, y - 1, color);
 			}
 			if (areaBoard[y + 1]) {
-				this.checkArea(this.state.colors, areaBoard, x, y + 1, color);
+				this.checkArea(this.state.squares, areaBoard, x, y + 1, color);
 			}
 		} else {
 			return null;
@@ -117,8 +130,13 @@ class Game extends Component {
 
 	render() {
 		return (
-			<div className="board">
-				{this.createBoard()}
+			<div className="game">
+				<div className="board">
+					{this.createBoard()}
+				</div>
+				<div className="controls">
+					{this.createControls()}
+				</div>
 			</div>
 		);
 	}

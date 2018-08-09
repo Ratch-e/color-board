@@ -13,12 +13,12 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 4px 0 #878d8e;
   display: grid;
-  grid-template-rows: repeat(15, 35px);
-  grid-template-columns: repeat(15, 35px);
-  grid-gap: 5px; }
+  grid-template-rows: repeat(15, 30px);
+  grid-template-columns: repeat(15, 30px);
+  grid-gap: 4px;
+  margin-bottom: 5px; }
   .board__square {
-    border: 1px solid black;
-    cursor: pointer; }
+    border: 1px solid black; }
     .board__square_color_red {
       background-color: red; }
     .board__square_color_green {
@@ -32,4 +32,31 @@ body {
     .board__square_color_orange {
       background-color: orange; }
     .board__square_color_lightblue {
+      background-color: lightblue; }
+
+.controls {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0 #878d8e;
+  display: grid;
+  grid-template-rows: repeat(1, 50px);
+  grid-template-columns: repeat(7, 50px);
+  grid-gap: 15px;
+  justify-content: center; }
+  .controls__item {
+    border: 1px solid black;
+    cursor: pointer; }
+    .controls__item_color_red {
+      background-color: red; }
+    .controls__item_color_green {
+      background-color: green; }
+    .controls__item_color_blue {
+      background-color: blue; }
+    .controls__item_color_yellow {
+      background-color: yellow; }
+    .controls__item_color_violet {
+      background-color: darkviolet; }
+    .controls__item_color_orange {
+      background-color: orange; }
+    .controls__item_color_lightblue {
       background-color: lightblue; }
