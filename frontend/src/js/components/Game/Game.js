@@ -51,13 +51,11 @@ class Game extends Component {
 					<Square
 						key={squares.length}
 						color={this.state.squares[x][y]}
-						click={this.squareClick}
-						x={x}
-						y={y}
 					/>
 				);
 			}
 		}
+
 		return squares;
 	}
 
@@ -76,6 +74,7 @@ class Game extends Component {
 				/>
 			);
 		}
+
 		return controls;
 	}
 
@@ -98,6 +97,7 @@ class Game extends Component {
 				}
 			}
 		}
+
 		this.setState({squares: newState.squares});
 
 		return null;
