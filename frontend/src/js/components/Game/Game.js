@@ -132,7 +132,7 @@ class Game extends Component {
 
 			setTimeout(() => {
 				this.AILogic();
-			}, 1000);
+			}, 200);
 
 			return null;
 		}

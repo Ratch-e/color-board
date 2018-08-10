@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd27da2b-405c-41c1-9394-c8ac0630ed50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/js/components/Game/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/components/Game/Game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/sass/common/controls.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/sass/common/controls.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -57,7 +54,7 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="html" value="7" />
-          <entry key="js" value="6719" />
+          <entry key="js" value="6757" />
           <entry key="json" value="65" />
           <entry key="sass" value="499" />
         </counts>
@@ -67,7 +64,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="7" />
           <entry key="JSON" value="65" />
-          <entry key="JavaScript" value="6719" />
+          <entry key="JavaScript" value="6757" />
           <entry key="Sass" value="499" />
         </counts>
       </usages-collector>
@@ -79,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/js/components/Game/Game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="161" column="38" lean-forward="true" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+            <state relative-caret-position="279">
+              <caret line="134" column="14" lean-forward="true" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="14" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -338,7 +335,7 @@
       <workItem from="1533629986235" duration="419000" />
       <workItem from="1533630440306" duration="40000" />
       <workItem from="1533630517834" duration="161000" />
-      <workItem from="1533630765266" duration="39117000" />
+      <workItem from="1533630765266" duration="40923000" />
     </task>
     <servers />
   </component>
@@ -363,7 +360,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39737000" />
+    <option name="totallyTimeSpent" value="41543000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,8 +586,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/js/components/Game/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="161" column="38" lean-forward="true" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+        <state relative-caret-position="279">
+          <caret line="134" column="14" lean-forward="true" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="14" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
