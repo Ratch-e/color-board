@@ -12,12 +12,19 @@ class Game extends Component {
 			squares: [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []],
 			colors: [
 				'red', 'green', 'blue', 'yellow', 'violet', 'orange', 'lightblue'
-			]
+			],
+			turn: 'Player',
+			playerColor: '',
+			enemyColor: '',
 		};
 		this.setColors = this.setColors.bind(this);
 		this.squareClick = this.squareClick.bind(this);
 		this.createBoard = this.createBoard.bind(this);
 		this.createControls = this.createControls.bind(this);
+		this.setInitialColors = this.setInitialColors.bind(this);
+		this.AILogic = this.AILogic.bind(this);
+		this.AIChooseColor = this.AIChooseColor.bind(this);
+		this.AIApplyColor = this.AIApplyColor.bind(this);
 	}
 
 	componentDidMount() {
@@ -37,6 +44,23 @@ class Game extends Component {
 		}
 
 		this.setState({squares: newState.squares});
+
+		this.setInitialColors();
+	}
+
+	/**
+	 * Сохранение изначальных цветов игроков
+	 */
+	setInitialColors() {
+		const playerColor = this.state.squares[this.state.rows - 1][0];
+		const enemyColor = this.state.squares[0][this.state.cols - 1];
+
+		if (playerColor !== enemyColor) {
+			this.setState({playerColor});
+			this.setState({enemyColor});
+		} else {
+			this.setColors();
+		}
 	}
 
 	/**
@@ -66,29 +90,91 @@ class Game extends Component {
 	createControls() {
 		let controls = [];
 		for (let x = 0; x < this.state.colors.length; x++) {
-			controls.push(
-				<Control
-					color={this.state.colors[x]}
-					click={this.squareClick}
-					key={x}
-				/>
-			);
+			if (this.state.colors[x] !== this.state.playerColor && this.state.colors[x] !== this.state.enemyColor) {
+				controls.push(
+					<Control
+						color={this.state.colors[x]}
+						click={this.squareClick}
+						key={x}
+					/>
+				);
+			}
 		}
 
 		return controls;
 	}
 
 	/**
-	 * Выбор цвета
+	 * Выбор цвета игроком
 	 * @param color
 	 * @returns {null}
 	 */
 	squareClick(color) {
+		if(this.state.turn === 'Player') {
+			const prevColor = this.state.squares[this.state.rows - 1][0];
+
+			let areaBoard = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
+
+			areaBoard = this.checkArea(this.state.squares, areaBoard, this.state.rows - 1, 0, prevColor);
+
+			let newState = {...this.state};
+			for (let x = 0; x < this.state.rows; x++) {
+				for (let y = 0; y < this.state.cols; y++) {
+					if (areaBoard[x][y] === 1) {
+						newState.squares[x][y] = color;
+					}
+				}
+			}
+
+			this.setState({squares: newState.squares});
+			this.setState({playerColor: color});
+			this.setState({turn: 'Enemy'});
+
+			setTimeout(() => {
+				this.AILogic();
+			}, 1000);
+
+			return null;
+		}
+	}
+
+	/**
+	 * Логика ии
+	 * @constructor
+	 */
+	AILogic() {
+		const color = this.AIChooseColor();
+		this.AIApplyColor(color);
+		this.setState({enemyColor: color});
+		this.setState({turn: 'Player'});
+	}
+
+	/**
+	 * Выбор цвета ии
+	 * @returns {string}
+	 * @constructor
+	 */
+	AIChooseColor() {
+
+		let colors = [...this.state.colors];
+
+		const playerColorIndex = colors.indexOf(this.state.playerColor);
+		colors.splice(playerColorIndex, 1);
+		const enemyColorIndex = colors.indexOf(this.state.enemyColor);
+		colors.splice(enemyColorIndex, 1);
+
+		return colors[Math.floor(Math.random() * colors.length)];
+	}
+
+	/**
+	 * Ход ии
+	 * @param color
+	 * @constructor
+	 */
+	AIApplyColor(color) {
+		const prevColor = this.state.squares[0][this.state.cols - 1];
 		let areaBoard = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
-		const prevColor = this.state.squares[this.state.rows - 1][0];
-
-		this.checkArea(this.state.squares, areaBoard, this.state.rows - 1, 0, prevColor);
-
+		areaBoard = this.checkArea(this.state.squares, areaBoard, 0, this.state.cols - 1, prevColor);
 		let newState = {...this.state};
 		for (let x = 0; x < this.state.rows; x++) {
 			for (let y = 0; y < this.state.cols; y++) {
@@ -99,12 +185,10 @@ class Game extends Component {
 		}
 
 		this.setState({squares: newState.squares});
-
-		return null;
 	}
 
 	/**
-	 * Проверка области для смены цвета
+	 * Проверка соответствия цвета у прилегающих элементов определения области смены цвета
 	 * @param colorsBoard
 	 * @param areaBoard
 	 * @param x
@@ -112,6 +196,7 @@ class Game extends Component {
 	 * @param color
 	 * @returns {null}
 	 */
+
 	checkArea(colorsBoard, areaBoard, x, y, color) {
 		if (colorsBoard[x][y] === color && areaBoard[x][y] !== 1) {
 			areaBoard[x][y] = 1;
@@ -127,8 +212,9 @@ class Game extends Component {
 			if (areaBoard[y + 1]) {
 				this.checkArea(this.state.squares, areaBoard, x, y + 1, color);
 			}
+			return areaBoard;
 		} else {
-			return null;
+			return areaBoard;
 		}
 	}
 
